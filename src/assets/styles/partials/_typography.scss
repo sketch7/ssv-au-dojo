@@ -1,0 +1,26 @@
+@import "../globals/all";
+
+body {
+	color: $body-text-color;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $primary-light-color;
+	font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+h2 {
+	color: $primary-light-color;
+}
+
+h3 {
+	color: $primary-lighter-color;
+}
+
+a {
+	color: $primary-light-color;
+	&:hover {
+		color: $primary-lighter-color;
+	}
+}

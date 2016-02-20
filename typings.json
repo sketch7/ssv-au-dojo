@@ -1,0 +1,8 @@
+{
+	"name": "ssv-au-dojo",
+	"ambientDependencies": {
+		"lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#e69fe60f2d6377ea4fae539493997b098f52cad1",
+		"ssv-core": "github:sketch7/ssv-core"
+	},
+	"ambientDevDependencies ": {}
+}

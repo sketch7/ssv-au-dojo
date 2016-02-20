@@ -1,0 +1,27 @@
+
+// defaults
+$body-text-color: #333;
+
+
+// primary
+$primary-color: #170A29;
+$primary-light-color: lighten($primary-color, 10%);
+$primary-lighter-color: lighten($primary-color, 20%);
+
+
+$secondary-color: #013242;
+$secondary-light-color: lighten($secondary-color, 10%);
+$secondary-lighter-color: lighten($secondary-color, 20%);
+
+$error-color: darkred;
+
+// backgrounds
+$primary-bg-color: #222;
+$bg-overlay-color: #f3f3f3;
+
+$secondary-bg-color: #333;
+
+// splash
+//$splash-bg-color: #efecca;
+$splash-bg-color: lighten($primary-color, 85%);
+$splash-loader-color: $primary-light-color;
