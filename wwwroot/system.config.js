@@ -12,7 +12,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "css": "github:systemjs/plugin-css@0.1.20",
     "lodash": "npm:lodash@4.5.0",
-    "ssv-core": "github:sketch7/ssv-core@0.2.0/amd/ssv-core",
+    "ssv-core": "github:sketch7/ssv-core@0.3.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -25,7 +25,7 @@ System.config({
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
     },
-    "github:sketch7/ssv-core@0.2.0": {
+    "github:sketch7/ssv-core@0.3.0": {
       "lodash": "npm:lodash@4.5.0"
     },
     "github:twbs/bootstrap@3.3.6": {
