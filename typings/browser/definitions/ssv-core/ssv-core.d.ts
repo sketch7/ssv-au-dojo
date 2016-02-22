@@ -7,11 +7,11 @@ export interface Selectable {
      */
     isSelected: boolean;
 }
-export class CollectionService {
+export class CollectionExtensions {
     /**
      * Unselect all collection items and select only the item specified.
-     * @param {ISelectable[]} collection collection to unselect.
-     * @param {ISelectable} selectItem item to select.
+     * @param {Selectable[]} collection collection to unselect.
+     * @param {Selectable} selectItem item to select.
      */
     mutualExclusiveSelect(collection: Selectable[], selectItem: Selectable): void;
 }
@@ -20,7 +20,7 @@ export class CollectionService {
 // Compiled using typings@0.6.8
 // Source: https://raw.githubusercontent.com/sketch7/ssv-core/master/dist/typings/enum.d.ts
 declare module 'ssv-core/dist/typings/enum' {
-export class EnumService {
+export class EnumExtensions {
     /**
      * Gets all names of the enum as an array.
      * @param {any} e enum to get data of.
@@ -155,7 +155,7 @@ export const enum KeyCode {
 // Compiled using typings@0.6.8
 // Source: https://raw.githubusercontent.com/sketch7/ssv-core/master/dist/typings/math.d.ts
 declare module 'ssv-core/dist/typings/math' {
-export class MathService {
+export class MathExtensions {
     add(value: number, valueB: number): number;
 }
 }
@@ -163,7 +163,15 @@ export class MathService {
 // Compiled using typings@0.6.8
 // Source: https://raw.githubusercontent.com/sketch7/ssv-core/master/dist/typings/string.d.ts
 declare module 'ssv-core/dist/typings/string' {
-export class StringService {
+export class StringExtensions {
+    /**
+     * Interpolates the string with the data specified by using the prefix (:) default as token.
+     * e.g. 'api/:lang/games' => 'api/en/games'
+     * @param {string} value string template to interpolate
+     * @param {*} data data object to replace tokens
+     * @param {string} [interpolatePrefix=":"] interpolation token prefix
+     * @returns interpolated string
+     */
     interpolate(value: string, data: any, interpolatePrefix?: string): string;
 }
 }
@@ -171,15 +179,15 @@ export class StringService {
 // Compiled using typings@0.6.8
 // Source: https://raw.githubusercontent.com/sketch7/ssv-core/master/dist/typings/utils.d.ts
 declare module 'ssv-core/dist/typings/utils' {
-import { MathService } from 'ssv-core/dist/typings/math';
-import { StringService } from 'ssv-core/dist/typings/string';
-import { CollectionService } from 'ssv-core/dist/typings/collection';
-import { EnumService } from 'ssv-core/dist/typings/enum';
+import { MathExtensions } from 'ssv-core/dist/typings/math';
+import { StringExtensions } from 'ssv-core/dist/typings/string';
+import { CollectionExtensions } from 'ssv-core/dist/typings/collection';
+import { EnumExtensions } from 'ssv-core/dist/typings/enum';
 export class Utils {
-    math: MathService;
-    string: StringService;
-    collection: CollectionService;
-    enum: EnumService;
+    math: MathExtensions;
+    string: StringExtensions;
+    collection: CollectionExtensions;
+    enum: EnumExtensions;
 }
 export let utils: Utils;
 export default utils;
