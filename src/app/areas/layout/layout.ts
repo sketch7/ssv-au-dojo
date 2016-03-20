@@ -10,7 +10,6 @@ export class LayoutController {
 
 	constructor(
 		private logService: LogService
-
 	) {
 
 		this._logger = logService.getLogger(id);
