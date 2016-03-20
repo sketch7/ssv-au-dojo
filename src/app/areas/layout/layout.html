@@ -1,11 +1,11 @@
-<section class="bg">
+<template class="bg">
 	<app-nav></app-nav>
-	<section class="main container">
-		<ui-view />
-	</section>
+	<div class="main container">
+		<router-view></router-view>
+	</div>
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted">&copy; Stephen Lautier 2015.</p>
 		</div>
 	</footer>
-</section>
+</template>

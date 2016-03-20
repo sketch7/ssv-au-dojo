@@ -6,16 +6,22 @@
 	<title>Sketch7 Aurelia Dojo</title>
 	<base href="/">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="./jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 	<link href="./jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.css" type="text/css" rel="stylesheet">
-		<!--<link href="./dist/assets/app-light.theme.css" type="text/css" rel="stylesheet">-->
+	<!--<link href="./dist/assets/app-light.theme.css" type="text/css" rel="stylesheet">-->
 	<link href="./dist/assets/app-dark.theme.css" type="text/css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-
-	<h1>Aurelia Dojo</h1>
-	<p>See console window...</p>
-	<!--<app-dojo>
+<body  aurelia-app="main">
+		<div class="splash">
+			<div class="message">Aurelia Navigation Skeleton</div>
+			<i class="fa fa-spinner fa-spin"></i>
+		</div>
+		<h1>Aurelia Dojo</h1>
+		<p>See console window...</p>
+		<!--<app-dojo>
 		<div class="splash-overlay">
 			<div class="loader">
 				<div class="side"></div>
@@ -30,12 +36,12 @@
 		</div>
 	</app-dojo>-->
 
-	<script src="./jspm_packages/system.js"></script>
-	<script src="./system.config.js"></script>
-	<script>
-		System.import("main");
-	</script>
+		<script src="./jspm_packages/system.js"></script>
+		<script src="./system.config.js"></script>
+		<script>
+			System.import("aurelia-bootstrapper");
+		</script>
 
-</body>
+	</body>
 
 </html>

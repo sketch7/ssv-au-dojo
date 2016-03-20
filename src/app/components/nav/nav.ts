@@ -1,11 +1,13 @@
+import {autoinject} from "aurelia-framework";
 import {ILog, LogService} from "core/logger/logger";
 
 import {INotificationService} from "modules/notification/notification";
 import {IUserInfo} from "modules/user/user";
 import consts from "app/app.const";
 
-const id = "nav";
+const id = "navController";
 
+@autoinject
 export class NavController {
 
 	heroesState = consts.routeStates.heroes;

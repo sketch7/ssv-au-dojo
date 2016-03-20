@@ -1,3 +1,4 @@
+import {autoinject} from "aurelia-framework";
 import {ILog, LogService} from "core/logger/logger";
 import consts from "app/app.const";
 import {AppRouteParams} from "app/app.router";
@@ -7,6 +8,7 @@ import {HeroService} from "./hero.service";
 
 const id = "heroDetailController";
 
+@autoinject
 export class HeroDetailController {
 
 	hero: Hero;
