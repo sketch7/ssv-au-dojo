@@ -1,3 +1,4 @@
+import {autoinject} from "aurelia-framework";
 import {ILog, LogService} from "core/logger/logger";
 import {Hero} from "./hero.model";
 import {Heroes} from "./mock-heroes";
@@ -5,6 +6,7 @@ import * as _ from "lodash";
 
 const id = "heroService";
 
+@autoinject
 export class HeroService {
 
 	private _logger: ILog;

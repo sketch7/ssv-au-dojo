@@ -5,7 +5,8 @@ import {Aurelia} from "aurelia-framework";
 export function configure(aurelia: Aurelia) {
 	aurelia.use
 		.standardConfiguration()
-		.developmentLogging();
+		.developmentLogging()
+		.feature("app/components", {});
 
 	//Uncomment the line below to enable animation.
 	//aurelia.use.plugin('aurelia-animator-css');

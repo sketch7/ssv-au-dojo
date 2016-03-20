@@ -9,7 +9,7 @@ const id = "LayoutController";
 @autoinject
 export class LayoutController {
 
-	private router: Router;
+	router: Router;
 	private logger: ILog;
 
 	constructor(
