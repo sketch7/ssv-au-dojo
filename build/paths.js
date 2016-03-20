@@ -16,9 +16,12 @@ module.exports = {
 		tsd: tsdMainFile,
 		ts: `./${srcRoot}/**/*.ts`,
 		html: `./${srcRoot}/app/**/*.html`,
-		sass: `./${srcRoot}/assets/**/*.scss`,
+		sass: [`./${srcRoot}/app/**/*.scss`, `./${srcRoot}/assets/styles/**/*.scss`],
 		imgs: `./${srcRoot}/assets/**/*.{png,jpeg,jpg}`,
 		indexHtml: `./${srcRoot}/index.html`
+	},
+	sass: {
+		includePaths: ["./src/assets/styles"]
 	},
 	doc: "./doc",
 	packageName: pkg.name

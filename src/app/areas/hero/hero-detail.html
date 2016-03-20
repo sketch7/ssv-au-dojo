@@ -1,0 +1,23 @@
+<div class="page-header">
+	<h1>
+		<a ui-sref="{{vm.heroesState}}">
+			<i class="glyphicon glyphicon-chevron-left"></i>
+		</a>
+		{{vm.hero.title}}
+		<small>{{vm.hero.caption}}</small>
+	</h1>
+</div>
+<div class="pull-left">
+	<img ng-src="/dist/assets/imgs/heroes/{{vm.hero.key}}.jpg" alt="{{vm.hero.title}}" class="img-thumbnail">
+	<div>
+		<span class="hero-role badge">{{ vm.hero.role }}</span>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8">
+			<p class="lead">{{vm.hero.description}}</p>
+			<a ui-sref="{{vm.heroesState}}">Back</a>
+		</div>
+	</div>
+</div>

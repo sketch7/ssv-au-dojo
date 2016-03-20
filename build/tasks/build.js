@@ -32,7 +32,7 @@ gulp.task("compile:ts", () => {
 
 	return tsResult.js
 		.pipe(sourcemaps.write("."))
-		.pipe(gulp.dest(`${paths.output.dist}`))
+		.pipe(gulp.dest(`${paths.output.dist}`));
 });
 
 function getTscProject() {
@@ -45,8 +45,10 @@ function getTscProject() {
 // sass
 gulp.task("compile:sass", () => {
 	return gulp.src(paths.src.sass)
-		.pipe(sass().on("error", sass.logError))
-		.pipe(gulp.dest(`${paths.output.dist}/assets`))
+		.pipe(sass({
+			includePaths: paths.sass.includePaths
+		}).on("error", sass.logError))
+		.pipe(gulp.dest(`${paths.output.dist}/assets`));
 });
 
 
@@ -60,7 +62,7 @@ gulp.task("html", (cb) => {
 
 gulp.task("compile:html", () => {
 	return gulp.src(paths.src.html)
-		.pipe(gulp.dest(`${paths.output.dist}/app`))
+		.pipe(gulp.dest(`${paths.output.dist}/app`));
 });
 
 gulp.task("compile:index-html", () => {
