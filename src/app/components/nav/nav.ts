@@ -30,15 +30,29 @@ export class NavBarController {
 		return this.userInfo.alias;
 	}
 
-	private _logger: ILog;
+	private logger: ILog;
+	private intervalToken: number;
 
 	constructor(
 		private logService: LogService,
 		private notificationService: NotificationService,
 		private userInfo: UserInfo
 	) {
-		this._logger = logService.getLogger(id);
-		this._logger.info("ctor", "init");
+		this.logger = logService.getLogger(id);
+		this.logger.debug("ctor", "init");
 		this.unreadNotificationsCount = this.notificationService.getUnreadCount();
+	}
+
+	attached(): void {
+		this.intervalToken = setInterval(() => {
+			this.logger.debug("attached", "interval trigger");
+			this.unreadNotificationsCount++;
+		}, 5000);
+	}
+
+	detached(): void {
+		if (this.intervalToken) {
+			clearInterval(this.intervalToken);
+		}
 	}
 }

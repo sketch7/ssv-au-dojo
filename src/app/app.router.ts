@@ -24,6 +24,13 @@ export class AppRouter {
 				moduleId: `${consts.basePath}/areas/hero/hero-layout`,
 				nav: true,
 				settings: {}
+			}, {
+				route: "basic-form",
+				title: "Basic Form",
+				name: consts.routeStates.basicForm,
+				moduleId: `${consts.basePath}/areas/basic-form/basic-form`,
+				nav: true,
+				settings: {}
 			}
 		]);
 		config.mapUnknownRoutes(`${consts.basePath}/areas/error/not-found`);

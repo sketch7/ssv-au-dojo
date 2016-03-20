@@ -18,7 +18,7 @@ export class LayoutController {
 	) {
 
 		this.logger = logService.getLogger(id);
-		this.logger.info("ctor", "init");
+		this.logger.debug("ctor", "init");
 	}
 
 	configureRouter(config: RouterConfiguration, router: Router) {

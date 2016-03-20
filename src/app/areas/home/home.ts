@@ -9,12 +9,12 @@ export class HomeController {
 
 	title = consts.name;
 
-	private _logger: ILog;
+	private logger: ILog;
 
 	constructor(
 		private logService: LogService
 	) {
-		this._logger = logService.getLogger(id);
+		this.logger = logService.getLogger(id);
 	}
 
 }
