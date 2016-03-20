@@ -19,7 +19,7 @@ export class HeroService {
 
 
 	getAll(): Promise<Hero[]> {
-		return this.$q.when(Heroes);
+		return Promise.resolve(Heroes);
 	}
 
 	getByKey(key: string): Promise<Hero> {
