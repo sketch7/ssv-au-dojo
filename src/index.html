@@ -14,34 +14,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body  aurelia-app="main">
-		<div class="splash">
-			<div class="message">Aurelia Navigation Skeleton</div>
-			<i class="fa fa-spinner fa-spin"></i>
+<body aurelia-app="main">
+	<div class="splash-overlay">
+		<div class="loader">
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
 		</div>
-		<h1>Aurelia Dojo</h1>
-		<p>See console window...</p>
-		<!--<app-dojo>
-		<div class="splash-overlay">
-			<div class="loader">
-				<div class="side"></div>
-				<div class="side"></div>
-				<div class="side"></div>
-				<div class="side"></div>
-				<div class="side"></div>
-				<div class="side"></div>
-				<div class="side"></div>
-				<div class="side"></div>
-			</div>
-		</div>
-	</app-dojo>-->
+	</div>
 
-		<script src="./jspm_packages/system.js"></script>
-		<script src="./system.config.js"></script>
-		<script>
-			System.import("aurelia-bootstrapper");
-		</script>
+	<script src="./jspm_packages/system.js"></script>
+	<script src="./system.config.js"></script>
+	<script>
+		System.import("aurelia-bootstrapper");
+	</script>
 
-	</body>
+</body>
 
 </html>
