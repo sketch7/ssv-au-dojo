@@ -20,18 +20,12 @@ export class AppRouter {
 			}, {
 				route: "heroes",
 				title: "Heroes",
-				name: consts.routeStates.heroes,
-				moduleId: `${consts.basePath}/areas/hero/hero-list`,
+				name: consts.routeStates.heroesLayout,
+				moduleId: `${consts.basePath}/areas/hero/hero-layout`,
 				nav: true,
-				settings: {}
-			}, {
-				route: "heroes/:hero",
-				title: "Hero",
-				name: consts.routeStates.hero,
-				moduleId: `${consts.basePath}/areas/hero/hero-detail`,
-				nav: false,
 				settings: {}
 			}
 		]);
+		config.mapUnknownRoutes(`${consts.basePath}/areas/error/not-found`);
 	}
 }

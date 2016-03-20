@@ -26,7 +26,7 @@ export class HeroDetailController {
 	}
 
 	activate(params: AppRouteParams) {
-		this.heroService.getByKey(params.hero)
+		return this.heroService.getByKey(params.hero)
 			.then(x => {
 				this.hero = x;
 			});

@@ -16,6 +16,7 @@ export class RouteStateConfig {
 	home = `${this.layout}.home`;
 	basicForm = `${this.layout}.basic-form`;
 
+	heroesLayout = `${this.layout}.heroes-layout`;
 	heroes = `${this.layout}.heroes`;
 	hero = `${this.layout}.hero`;
 }

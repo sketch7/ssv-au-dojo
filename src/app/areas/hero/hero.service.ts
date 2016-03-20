@@ -32,6 +32,11 @@ export class HeroService {
 			.then(x => {
 				const result = _.find(x, { key: key });
 				this._logger.info("getByKey", "find complete.", { key: key, result: result });
+
+				if (!result) {
+					throw new Error(`Hero '${key}' not found`);
+				}
+
 				return result;
 			});
 	}

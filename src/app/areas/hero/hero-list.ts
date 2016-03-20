@@ -1,4 +1,5 @@
 import {autoinject} from "aurelia-framework";
+import {ILog, LogService} from "core/logger/logger";
 import consts from "app/app.const";
 import {Hero} from "./hero.model";
 import {HeroService} from "./hero.service";
@@ -12,17 +13,19 @@ export class HeroListController {
 	heroes: Hero[];
 	heroState = consts.routeStates.hero;
 
-	constructor(
-		private heroService: HeroService
-	) {
+	private logger: ILog;
 
+	constructor(
+		private heroService: HeroService,
+		private logService: LogService
+	) {
+		this.logger = logService.getLogger(id);
 	}
 
 	activate() {
-		this.heroService.getAll()
+		return this.heroService.getAll()
 			.then(x => {
 				this.heroes = x;
 			});
 	}
-
 }
