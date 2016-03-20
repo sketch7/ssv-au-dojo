@@ -14,15 +14,15 @@ export class HeroDetailController {
 	hero: Hero;
 	heroesState = consts.routeStates.heroes;
 
-	private _logger: ILog;
+	private logger: ILog;
 
 	constructor(
 		private logService: LogService,
 		private heroService: HeroService
 	) {
 
-		this._logger = logService.getLogger(id);
-		this._logger.debug("ctor");
+		this.logger = logService.getLogger(id);
+		this.logger.debug("ctor");
 	}
 
 	activate(params: AppRouteParams) {

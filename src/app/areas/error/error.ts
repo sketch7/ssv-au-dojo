@@ -6,12 +6,12 @@ const id = "errorController";
 @autoinject
 export class ErrorController {
 
-	private _logger: ILog;
+	private logger: ILog;
 
 	constructor(
 		private logService: LogService
 	) {
-		this._logger = logService.getLogger(id);
+		this.logger = logService.getLogger(id);
 	}
 
 }
