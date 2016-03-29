@@ -12,7 +12,8 @@
 - Value Converters
  - KebabValueConverter
  - TruncateValueConverter
-- Extract Element - quickway
+- Extract Element - without VM
+- 
 
 # Value Converters
 
