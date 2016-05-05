@@ -1,5 +1,5 @@
 import {autoinject} from "aurelia-framework";
-import {ILog, LogService} from "core/logger/logger";
+import {ILog, LogService} from "ssv-au-core";
 import {Hero} from "./hero.model";
 import {Heroes} from "./mock-heroes";
 import * as _ from "lodash";

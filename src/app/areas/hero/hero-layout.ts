@@ -1,6 +1,6 @@
 import {autoinject} from "aurelia-framework";
 import {Router, RouterConfiguration} from "aurelia-router";
-import {ILog, LogService} from "core/logger/logger";
+import {ILog, LogService} from "ssv-au-core";
 import consts from "app/app.const";
 
 const id = "heroListController";

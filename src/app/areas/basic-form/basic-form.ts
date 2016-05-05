@@ -1,5 +1,5 @@
 import {autoinject} from "aurelia-framework";
-import {ILog, LogService} from "core/logger/logger";
+import {ILog, LogService} from "ssv-au-core";
 import {UserInfo} from "app/modules/user/user";
 
 const id = "basicFormController";

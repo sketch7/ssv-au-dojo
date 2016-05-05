@@ -1,6 +1,6 @@
 import {autoinject, customElement, bindable} from "aurelia-framework";
 import {Router} from "aurelia-router";
-import {ILog, LogService} from "core/logger/logger";
+import {ILog, LogService} from "ssv-au-core";
 
 import {NotificationService} from "app/modules/notification/notification";
 import {UserInfo} from "app/modules/user/user";
