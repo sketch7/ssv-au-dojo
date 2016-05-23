@@ -31,6 +31,13 @@ export class AppRouter {
 				moduleId: `${consts.basePath}/areas/basic-form/basic-form`,
 				nav: true,
 				settings: {}
+			}, {
+				route: "route-builder",
+				title: "Route builder lab",
+				name: consts.routeStates.routeBuilder,
+				moduleId: `${consts.basePath}/areas/route-builder/route-builder.component`,
+				nav: true,
+				settings: {}
 			}
 		]);
 		config.mapUnknownRoutes(`${consts.basePath}/areas/error/not-found`);

@@ -15,6 +15,7 @@ export class RouteStateConfig {
 	error = "error";
 	home = `${this.layout}.home`;
 	basicForm = `${this.layout}.basic-form`;
+	routeBuilder = `${this.layout}.route-builder`;
 
 	heroesLayout = `${this.layout}.heroes-layout`;
 	heroes = `${this.layout}.heroes`;
