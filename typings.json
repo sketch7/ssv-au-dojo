@@ -7,7 +7,7 @@
 	"globalDevDependencies": {},
 	"dependencies": {
 		"bluebird": "registry:npm/bluebird#3.2.1+20160211005852",
-		"ssv-au-core": "file:wwwroot/jspm_packages/github/sketch7/ssv-au-core@develop/typings/index.d.ts",
+		"ssv-au-core": "file:wwwroot/jspm_packages/github/sketch7/ssv-au-core@route-builder/typings/index.d.ts",
 		"ssv-core": "github:sketch7/ssv-core"
 	}
 }

@@ -1,8 +1,8 @@
 {
   "resolution": "main",
   "tree": {
-    "src": "C:\\Users\\chiko-pc\\Development\\git.depot\\ssv-au-dojo\\wwwroot\\jspm_packages\\github\\sketch7\\ssv-au-core@develop\\typings\\index.d.ts",
-    "raw": "file:wwwroot/jspm_packages/github/sketch7/ssv-au-core@develop/typings/index.d.ts",
-    "typings": "C:\\Users\\chiko-pc\\Development\\git.depot\\ssv-au-dojo\\wwwroot\\jspm_packages\\github\\sketch7\\ssv-au-core@develop\\typings\\index.d.ts"
+    "src": "C:\\Users\\chiko-pc\\Development\\git.depot\\ssv-au-dojo\\wwwroot\\jspm_packages\\github\\sketch7\\ssv-au-core@route-builder\\typings\\index.d.ts",
+    "raw": "file:wwwroot/jspm_packages/github/sketch7/ssv-au-core@route-builder/typings/index.d.ts",
+    "typings": "C:\\Users\\chiko-pc\\Development\\git.depot\\ssv-au-dojo\\wwwroot\\jspm_packages\\github\\sketch7\\ssv-au-core@route-builder\\typings\\index.d.ts"
   }
 }
