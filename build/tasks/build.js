@@ -24,11 +24,11 @@ gulp.task("rebuild", (cb) => {
 // scripts
 gulp.task("compile:ts", () => {
 	var tsProject = getTscProject();
-	var tsResult = gulp.src(paths.src.typings.concat(paths.src.ts))
+	var tsResult = gulp.src([...paths.src.typings, paths.src.ts])
 		.pipe(plumber())
 	//.pipe(changed(paths.output.dist, { extension: ".js" }))
 		.pipe(sourcemaps.init())
-		.pipe(tsc(tsProject));
+		.pipe(tsProject());
 
 	return tsResult.js
 		.pipe(sourcemaps.write("."))
@@ -37,7 +37,6 @@ gulp.task("compile:ts", () => {
 
 function getTscProject() {
 	return tsc.createProject("tsconfig.json", {
-		sortOutput: true,
 		typescript: typescript
 	});
 }
@@ -67,7 +66,7 @@ gulp.task("compile:html", () => {
 
 gulp.task("compile:index-html", () => {
 	return gulp.src(paths.src.indexHtml)
-		.pipe(gulp.dest(paths.output.root))
+		.pipe(gulp.dest(paths.output.root));
 });
 
 
