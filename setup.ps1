@@ -8,6 +8,10 @@ Write-Host "npm update..." -ForegroundColor Cyan
 & npm update
 Write-host ""
 
+Write-Host "typings install..." -ForegroundColor Cyan
+& typings install
+Write-host ""
+
 Write-Host "setup symbolic link..." -ForegroundColor Cyan
 cmd /c mklink /d wwwroot\node_modules "$(get-location)\node_modules" 
 Write-host ""
