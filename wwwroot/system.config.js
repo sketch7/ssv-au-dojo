@@ -16,7 +16,6 @@
 		"app": "app",
 		"main": "main.js",
 		"rxjs": "npm:rxjs",
-		"@ngrx": "npm:@ngrx",
 		"@ssv": "npm:@ssv",
 		"lodash": "npm:lodash",
 		"fuse": "npm:fuse.js/src",
