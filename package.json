@@ -6,6 +6,9 @@
   "keywords": [],
   "author": "Stephen Lautier <stephen.lautier@outlook.com>",
   "license": "MIT",
+  "dependencies": {
+    
+  },
   "jspm": {
     "directories": {
       "baseURL": "wwwroot"
