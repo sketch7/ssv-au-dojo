@@ -1,6 +1,7 @@
-import {autoinject} from "aurelia-framework";
-import {Router, RouterConfiguration} from "aurelia-router";
-import {ILog, LoggerFactory} from "@ssv/au-core";
+import { autoinject } from "aurelia-framework";
+import { RouterConfiguration } from "aurelia-router";
+import { ILog, LoggerFactory } from "@ssv/au-core";
+
 import consts from "app/app.const";
 
 const id = "heroListController";
@@ -11,12 +12,12 @@ export class HeroListController {
 	private logger: ILog;
 
 	constructor(
-		private loggerFactory: LoggerFactory
+		loggerFactory: LoggerFactory
 	) {
 		this.logger = loggerFactory.get(id);
 	}
 
-	configureRouter(config: RouterConfiguration, router: Router) {
+	configureRouter(config: RouterConfiguration) {
 		this.logger.debug("configureRouter");
 		config.map([
 			{
@@ -36,7 +37,6 @@ export class HeroListController {
 				settings: {}
 			}
 		]);
-		//this.router = router;
 	}
 
 }

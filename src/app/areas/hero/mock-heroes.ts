@@ -1,6 +1,7 @@
-import {Hero} from "./hero.model";
+import { Hero } from "./hero.model";
 
-export let Heroes: Hero[] = [
+/* tslint:disable:max-line-length */
+export const HEROES: Hero[] = [
 	{
 		key: "azmodan",
 		title: "Azmodan",
@@ -58,3 +59,4 @@ export let Heroes: Hero[] = [
 		description: "Like all Blood Elves, Prince Kael'thas was transformed by the fall of Quel'thalas. Desperate to save his people from being consumed by their magical addiction, he joined forces with the Burning Legion and now lords over Tempest Keep."
 	},
 ];
+/* tslint:enable:max-line-length */

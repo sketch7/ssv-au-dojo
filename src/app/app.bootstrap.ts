@@ -1,5 +1,5 @@
-import {autoinject} from "aurelia-framework";
-import {ILog, LoggerFactory, RouteBuilder } from "@ssv/au-core";
+import { autoinject } from "aurelia-framework";
+import { ILog, LoggerFactory, RouteBuilder } from "@ssv/au-core";
 
 const id = "bootstrapper";
 
@@ -9,7 +9,7 @@ export class Bootstrapper {
 	private logger: ILog;
 
 	constructor(
-		private loggerFactory: LoggerFactory,
+		loggerFactory: LoggerFactory,
 		private routeBuilder: RouteBuilder
 	) {
 		this.logger = loggerFactory.get(id);

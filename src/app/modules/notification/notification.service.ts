@@ -5,19 +5,17 @@ export interface NotificationMessage {
 }
 
 export interface INotificationService {
-	getAllUnreadMessages(): NotificationMessage[];
+	getAllUnreadMessages(): NotificationMessage[] | null;
 	getUnreadCount(): number;
 
 	setMessages(messages: NotificationMessage[]): void;
 }
 
 export class NotificationService implements INotificationService {
-	static id = "notificationService";
 
 	private _messages: NotificationMessage[];
 
 	constructor() {
-
 		const messages: NotificationMessage[] = [
 			{ title: "An enemy has been slain.", isRead: false, receivedDate: new Date() },
 			{ title: "Password has been changed!", isRead: true, receivedDate: new Date() },
@@ -28,7 +26,7 @@ export class NotificationService implements INotificationService {
 
 	getAllUnreadMessages() {
 		if (!this._messages) {
-			return void 0;
+			return null;
 		}
 		return this._messages.filter((value: NotificationMessage) => {
 			return !value.isRead;

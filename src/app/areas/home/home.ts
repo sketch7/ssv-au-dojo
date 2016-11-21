@@ -1,5 +1,6 @@
-import {autoinject} from "aurelia-framework";
-import {ILog, LoggerFactory} from "@ssv/au-core";
+import { autoinject } from "aurelia-framework";
+import { ILog, LoggerFactory } from "@ssv/au-core";
+
 import consts from "app/app.const";
 
 const id = "homeController";
@@ -12,7 +13,7 @@ export class HomeController {
 	private logger: ILog;
 
 	constructor(
-		private loggerFactory: LoggerFactory
+		loggerFactory: LoggerFactory
 	) {
 		this.logger = loggerFactory.get(id);
 	}

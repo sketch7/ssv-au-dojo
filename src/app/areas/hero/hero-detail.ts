@@ -1,10 +1,10 @@
-import {autoinject} from "aurelia-framework";
-import {ILog, LoggerFactory} from "@ssv/au-core";
-import consts from "app/app.const";
-import {AppRouteParams} from "app/app.router";
+import { autoinject } from "aurelia-framework";
+import { ILog, LoggerFactory } from "@ssv/au-core";
 
-import {Hero} from "./hero.model";
-import {HeroService} from "./hero.service";
+import consts from "app/app.const";
+import { AppRouteParams } from "app/app.router";
+import { Hero } from "./hero.model";
+import { HeroService } from "./hero.service";
 
 const id = "heroDetailController";
 
@@ -17,7 +17,7 @@ export class HeroDetailController {
 	private logger: ILog;
 
 	constructor(
-		private loggerFactory: LoggerFactory,
+		loggerFactory: LoggerFactory,
 		private heroService: HeroService
 	) {
 
@@ -26,7 +26,7 @@ export class HeroDetailController {
 	}
 
 	activate(params: AppRouteParams) {
-		return this.heroService.getByKey(params.hero)
+		return this.heroService.getByKey(params.hero!)
 			.then(x => {
 				this.hero = x;
 			});

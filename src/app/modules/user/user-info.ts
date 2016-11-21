@@ -7,9 +7,4 @@ export class UserInfo implements IUserInfo {
 
 	alias = "Chiko";
 
-	constructor(
-	) {
-
-	}
-
 }

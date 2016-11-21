@@ -1,8 +1,9 @@
-import {autoinject} from "aurelia-framework";
-import {ILog, LoggerFactory} from "@ssv/au-core";
+import { autoinject } from "aurelia-framework";
+import { ILog, LoggerFactory } from "@ssv/au-core";
+
 import consts from "app/app.const";
-import {Hero} from "./hero.model";
-import {HeroService} from "./hero.service";
+import { Hero } from "./hero.model";
+import { HeroService } from "./hero.service";
 
 const id = "heroListController";
 
@@ -16,8 +17,8 @@ export class HeroListController {
 	private logger: ILog;
 
 	constructor(
+		loggerFactory: LoggerFactory,
 		private heroService: HeroService,
-		private loggerFactory: LoggerFactory
 	) {
 		this.logger = loggerFactory.get(id);
 	}

@@ -1,9 +1,9 @@
-import {autoinject, customElement, bindable} from "aurelia-framework";
-import {Router} from "aurelia-router";
-import {ILog, LoggerFactory} from "@ssv/au-core";
+import { autoinject, customElement, bindable } from "aurelia-framework";
+import { Router } from "aurelia-router";
+import { ILog, LoggerFactory } from "@ssv/au-core";
 
-import {NotificationService} from "app/modules/notification/notification";
-import {UserInfo} from "app/modules/user/user";
+import { NotificationService } from "app/modules/notification/notification";
+import { UserInfo } from "app/modules/user/user";
 import consts from "app/app.const";
 
 const id = "navBarController";
@@ -12,8 +12,7 @@ const id = "navBarController";
 @customElement("ssv-navbar")
 export class NavBarController {
 
-	@bindable
-	router: Router = null;
+	@bindable router: Router;
 
 	heroesState = consts.routeStates.heroes;
 	unreadNotificationsCount = 0;
@@ -34,7 +33,7 @@ export class NavBarController {
 	private intervalToken: number;
 
 	constructor(
-		private loggerFactory: LoggerFactory,
+		loggerFactory: LoggerFactory,
 		private notificationService: NotificationService,
 		private userInfo: UserInfo
 	) {

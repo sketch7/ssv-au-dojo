@@ -1,7 +1,6 @@
-import {FrameworkConfiguration} from "aurelia-framework";
+import { FrameworkConfiguration } from "aurelia-framework";
 
-export function configure(aurelia: FrameworkConfiguration, args: any) {
+export function configure(aurelia: FrameworkConfiguration) {
 	aurelia.globalResources("./nav/nav");
-
 	aurelia.globalResources("./value-converters/uppercase");
 }

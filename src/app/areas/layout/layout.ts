@@ -1,7 +1,8 @@
-import {autoinject} from "aurelia-framework";
-import {Router, RouterConfiguration} from "aurelia-router";
-import {ILog, LoggerFactory} from "@ssv/au-core";
-import {AppRouter} from "app/app.router";
+import { autoinject } from "aurelia-framework";
+import { Router, RouterConfiguration } from "aurelia-router";
+import { ILog, LoggerFactory } from "@ssv/au-core";
+
+import { AppRouter } from "app/app.router";
 
 const id = "layoutController";
 
@@ -12,7 +13,7 @@ export class LayoutController {
 	private logger: ILog;
 
 	constructor(
-		private loggerFactory: LoggerFactory,
+		loggerFactory: LoggerFactory,
 		private appRouter: AppRouter
 	) {
 

@@ -1,4 +1,4 @@
-import {RouterConfiguration} from "aurelia-router";
+import { RouterConfiguration } from "aurelia-router";
 import consts from "app/app.const";
 
 export interface AppRouteParams {
