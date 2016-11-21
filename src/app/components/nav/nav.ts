@@ -1,6 +1,6 @@
 import {autoinject, customElement, bindable} from "aurelia-framework";
 import {Router} from "aurelia-router";
-import {ILog, LogService} from "ssv-au-core";
+import {ILog, LoggerFactory} from "@ssv/au-core";
 
 import {NotificationService} from "app/modules/notification/notification";
 import {UserInfo} from "app/modules/user/user";
@@ -34,11 +34,11 @@ export class NavBarController {
 	private intervalToken: number;
 
 	constructor(
-		private logService: LogService,
+		private loggerFactory: LoggerFactory,
 		private notificationService: NotificationService,
 		private userInfo: UserInfo
 	) {
-		this.logger = logService.getLogger(id);
+		this.logger = loggerFactory.get(id);
 		this.logger.debug("ctor", "init");
 		this.unreadNotificationsCount = this.notificationService.getUnreadCount();
 	}

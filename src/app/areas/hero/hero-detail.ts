@@ -1,5 +1,5 @@
 import {autoinject} from "aurelia-framework";
-import {ILog, LogService} from "ssv-au-core";
+import {ILog, LoggerFactory} from "@ssv/au-core";
 import consts from "app/app.const";
 import {AppRouteParams} from "app/app.router";
 
@@ -17,11 +17,11 @@ export class HeroDetailController {
 	private logger: ILog;
 
 	constructor(
-		private logService: LogService,
+		private loggerFactory: LoggerFactory,
 		private heroService: HeroService
 	) {
 
-		this.logger = logService.getLogger(id);
+		this.logger = loggerFactory.get(id);
 		this.logger.debug("ctor");
 	}
 

@@ -1,17 +1,17 @@
 import {autoinject} from "aurelia-framework";
-import {ILog, LogService} from "ssv-au-core";
+import {ILog, LoggerFactory} from "@ssv/au-core";
 
 const id = "notFoundController";
 
 @autoinject
 export class NotFoundController {
 
-	private _logger: ILog;
+	private logger: ILog;
 
 	constructor(
-		private logService: LogService
+		private loggerFactory: LoggerFactory
 	) {
-		this._logger = logService.getLogger(id);
+		this.logger = loggerFactory.get(id);
 	}
 
 }

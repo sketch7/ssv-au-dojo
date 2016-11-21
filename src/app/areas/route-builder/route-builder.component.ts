@@ -1,5 +1,5 @@
 import {autoinject} from "aurelia-framework";
-import {ILog, LogService, RouteBuilder } from "ssv-au-core";
+import {ILog, LoggerFactory, RouteBuilder } from "@ssv/au-core";
 
 const id = "routeBuilderController";
 
@@ -13,10 +13,10 @@ export class RouteBuilderController {
 	private logger: ILog;
 
 	constructor(
-		private logService: LogService,
+		private loggerFactory: LoggerFactory,
 		private routeBuilder: RouteBuilder
 	) {
-		this.logger = logService.getLogger(id);
+		this.logger = loggerFactory.get(id);
 	}
 
 	activate(): void {

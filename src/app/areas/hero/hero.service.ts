@@ -1,5 +1,5 @@
 import {autoinject} from "aurelia-framework";
-import {ILog, LogService} from "ssv-au-core";
+import {ILog, LoggerFactory} from "@ssv/au-core";
 import {Hero} from "./hero.model";
 import {Heroes} from "./mock-heroes";
 import * as _ from "lodash";
@@ -9,14 +9,13 @@ const id = "heroService";
 @autoinject
 export class HeroService {
 
-	private _logger: ILog;
+	private logger: ILog;
 
 	constructor(
-		private logService: LogService
+		private loggerFactory: LoggerFactory
 	) {
-
-		this._logger = logService.getLogger(id);
-		this._logger.debug("ctor", "init");
+		this.logger = loggerFactory.get(id);
+		this.logger.debug("ctor", "init");
 	}
 
 
@@ -26,17 +25,16 @@ export class HeroService {
 
 	getByKey(key: string): Promise<Hero> {
 
-		this._logger.info("getByKey", "finding...", { key: key });
+		this.logger.info("getByKey", "finding...", { key: key });
 
 		return this.getAll()
 			.then(x => {
 				const result = _.find(x, { key: key });
-				this._logger.info("getByKey", "find complete.", { key: key, result: result });
+				this.logger.info("getByKey", "find complete.", { key: key, result: result });
 
 				if (!result) {
 					throw new Error(`Hero '${key}' not found`);
 				}
-
 				return result;
 			});
 	}

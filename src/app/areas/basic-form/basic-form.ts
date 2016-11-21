@@ -1,5 +1,5 @@
 import {autoinject} from "aurelia-framework";
-import {ILog, LogService} from "ssv-au-core";
+import {ILog, LoggerFactory} from "@ssv/au-core";
 import {UserInfo} from "app/modules/user/user";
 
 const id = "basicFormController";
@@ -13,10 +13,10 @@ export class BasicFormController {
 	private logger: ILog;
 
 	constructor(
-		private logService: LogService,
+		private loggerFactory: LoggerFactory,
 		private userInfo: UserInfo
 	) {
-		this.logger = logService.getLogger(id);
+		this.logger = loggerFactory.get(id);
 	}
 
 	activate() {
